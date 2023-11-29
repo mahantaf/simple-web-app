@@ -11,4 +11,9 @@ router.post('/', function(req, res, next) {
     saveUser(user);
 });
 
+router.delete('/:id', function(req, res, next) {
+    const user = User.findOne({_id: req.params.id });
+    user.remove();
+});
+
 module.exports = router;
