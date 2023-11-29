@@ -11,10 +11,4 @@ router.post('/', function(req, res, next) {
     saveUser(user);
 });
 
-router.put('/:id', function(req, res, next) {
-    const userData = req.body;
-    const user = Users.findOne({ userData });
-    updateUser(user);
-});
-
 module.exports = router;
