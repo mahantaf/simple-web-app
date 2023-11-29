@@ -12,9 +12,9 @@ router.post('/', function(req, res, next) {
 });
 
 router.put('/:id', function(req, res, next) {
-    const userData = req.body;
-    const user = Users.findOne({ userData });
-    updateUser(user);
+  const userData = req.body;
+  const user = Users.findOne({ userData });
+  updateUser(user);
 });
 
 module.exports = router;
